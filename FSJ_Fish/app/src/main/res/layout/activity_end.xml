@@ -35,4 +35,26 @@
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black" />
 
+    <TextView
+        android:text="fenshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fenshu"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/tuichu"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/jieguo"
+        android:text="jieguo"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_above="@+id/fenshu"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

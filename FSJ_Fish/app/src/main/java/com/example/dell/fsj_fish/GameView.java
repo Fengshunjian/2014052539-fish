@@ -479,7 +479,13 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Runn
         public void shoudaogongji(ArrayList<direnImage> direns){
             //if(!shougongjiState){
             int d =0;
-
+                if(getw()>display_w||geth()>display_h){
+                    Intent intent = new Intent(getContext(), EndActivity.class);
+                    intent.putExtra("fenshu",fenshu);
+                    intent.putExtra("jieguo","恭喜你成为海王霸主");
+                    getContext().startActivity(intent);
+                    android.os.Process.killProcess(android.os.Process.myPid());
+                }
                 for (GameImage diren_d : (List<GameImage>) direns.clone()) {
                     direnImage diren_dd = (direnImage) diren_d;
                     d=(int)(diren_dd.getdirenw()*0.4);
@@ -492,6 +498,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Runn
                             if(getdirenspeed()!=0){
                             gameImages.remove(this);
                             Intent intent = new Intent(getContext(), EndActivity.class);
+                                intent.putExtra("fenshu",fenshu);
+                                intent.putExtra("jieguo","游戏失败");
                             getContext().startActivity(intent);
                             android.os.Process.killProcess(android.os.Process.myPid());
 
@@ -515,6 +523,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Runn
                             if(getdirenspeed()!=0) {
                                 gameImages.remove(this);
                                 Intent intent = new Intent(getContext(), EndActivity.class);
+                                intent.putExtra("fenshu",fenshu);
+                                intent.putExtra("jieguo","游戏失败");
                                 getContext().startActivity(intent);
                                 android.os.Process.killProcess(android.os.Process.myPid());
 
@@ -537,6 +547,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Runn
                             if(getdirenspeed()!=0) {
                                 gameImages.remove(this);
                                 Intent intent = new Intent(getContext(), EndActivity.class);
+                                intent.putExtra("fenshu",fenshu);
+                                intent.putExtra("jieguo","游戏失败");
                                 getContext().startActivity(intent);
                                 android.os.Process.killProcess(android.os.Process.myPid());
 
@@ -559,6 +571,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback,Runn
                             if(getdirenspeed()!=0) {
                                 gameImages.remove(this);
                                 Intent intent = new Intent(getContext(), EndActivity.class);
+                                intent.putExtra("fenshu",fenshu);
+                                intent.putExtra("jieguo","游戏失败");
                                 getContext().startActivity(intent);
                                 android.os.Process.killProcess(android.os.Process.myPid());
 
